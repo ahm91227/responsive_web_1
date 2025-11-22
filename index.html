@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Clarity-Taliwind CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        .navdiv {
+            height: 70px;
+            width: 100%;
+            border: solid black 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0px 30px;
+        }
+
+        .logo_div {
+            height: max-content;
+            width: 140px;
+            /* border: solid black 1px; */
+
+        }
+
+        #img {
+            width: 100%;
+
+        }
+
+        ul {
+            height: max-content;
+            width: max-content;
+            /* border: solid black 1px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            position: relative;
+        }
+
+        .list {
+            list-style: none;
+            font-size: 20px;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            gap: 4px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #drop_errow{
+            font-size: 14px;
+            margin-top: 3px;
+
+        }
+        .drop_down{
+            height: max-content;
+            width: 230px;
+            /* border: solid black 1px; */
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.144);
+            position: absolute;
+            top: 40px;
+            border-radius: 10px;
+            background-color: white;
+            padding: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+        }
+        .drop_down_text_div{
+            height: 43%;
+            /* border: solid black 1px; */
+            width: 100%;
+            border-radius: 10px;
+            background-color: rgba(245, 245, 245, 0.116);
+            padding: 5px;
+        }
+        .d_ptag{
+            font-size: 17px;
+            color: rgba(0, 0, 255, 0.61);
+
+        }
+        .list:hover .drop_down{
+            opacity: 1;
+            visibility: visible;
+            cursor: pointer;
+
+
+        }
+        .n_prnt_div{
+            height: max-content;
+            width: max-content;
+            /* border: solid black 1px; */
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+        }
+        .icon_div{
+            height:max-content;
+            width:max-content;
+            /* border: solid black 1px; */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #facebook{
+            font-size: 18px;
+        }
+        .btn_1{
+            border-radius: 50%;
+            background-color: transparent;
+            height: 33px;
+            width: 33px;
+            border: none;
+            color: rgb(114, 113, 113);
+
+        }
+        .btn_1:hover{
+            color: rgba(0, 0, 0, 0.774);
+            cursor: pointer;
+            background-color: rgba(230, 222, 222, 0.774);
+        }
+        .n_div{
+            height: max-content;
+            width: max-content;
+            /* border: solid red 1px; */
+            display: flex;
+            gap: 13px;
+            
+        }
+        .buton_div{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(218, 213, 213, 0.24);
+
+            
+        }
+        #search{
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.438);
+
+        }
+        .btn2{
+            height: 40px;
+            width: 130px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            background-color: black;
+            transition: all .3s linear;
+            border: transparent;
+        }
+        .btn2:hover{
+            cursor: pointer;
+            background-color: white;
+            border: solid black 1px;
+            color: black;
+        }
+        .menubar{
+            height: max-content;
+            width: max-content;
+            /* border: solid black 1px; */
+            display: none;
+        }
+        /* ////////////////////// */
+        @media screen and (max-width:1100px) {
+            .n_prnt_div{
+                display: none;
+            }
+            .menubar{
+                display: block;
+            }
+
+        }
+        @media screen and (max-width:758px) {
+            ul{
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <nav class="navdiv">
+            <div class="logo_div">
+                <img id="img" src="./images/newlogo.svg" alt="">
+            </div>
+
+            <ul>
+                <li class="list">Home
+                    <i id="drop_errow" class="fa-solid fa-angle-down"></i>
+                    <div class="drop_down">
+                        <div class="drop_down_text_div">
+                            <p class="d_ptag">Business Blog</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);">Personal Blog</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list" style="color: rgba(0, 0, 0, 0.555);">Page
+                    <i id="drop_errow" class="fa-solid fa-angle-down"></i>
+                    <div class="drop_down">
+                        <div class="drop_down_text_div">
+                            <p class="d_ptag">Category Page</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> About us</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> Author page</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> Search page</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> Sign in</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> Sign up</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> Style Guide Page</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> Privacy & Policy page</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);"> Error Page</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list" style="color: rgba(0, 0, 0, 0.555);">Blog
+                    <i id="drop_errow" class="fa-solid fa-angle-down"></i>
+                     <div class="drop_down">
+                        <div class="drop_down_text_div">
+                            <p class="d_ptag">Blog Detail One</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);">Blog Detail Two</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);">Blog Detail Three</p>
+                        </div>
+                        <div class="drop_down_text_div" style="margin-top: 10px;">
+                            <p class="d_ptag" style="color: rgba(0, 0, 0, 0.445);">Blog Detail four</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list" style="color: rgba(0, 0, 0, 0.555);">Support</li>
+            </ul>
+            <div class="n_prnt_div">
+                <div class="icon_div">
+                    <button class="btn_1">
+
+                        <i id="facebook" class="fa-brands fa-square-facebook"></i>
+                    </button>
+                    <button class="btn_1">
+                        <i id="facebook" class="fa-brands fa-twitter"></i>
+                    </button>
+                    <button class="btn_1">
+                        <i id="facebook" class="fa-brands fa-linkedin-in"></i>
+                    </button>
+                    <button class="btn_1">
+                        <i id="facebook" class="fa-brands fa-pinterest"></i>
+                    </button>
+                </div>
+                <div class="n_div">
+                    <button class="buton_div">
+                        <i id="search" class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button class="btn2">Subscribe</button>
+                </div>
+            </div>
+            <div class="menubar">
+                <button class="btn_1">
+                    <i id="facebook" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </main>
+
+</body>
+
+</html>
