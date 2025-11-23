@@ -15,15 +15,20 @@
 
         }
 
+
         .navdiv {
             height: 70px;
             width: 100%;
-            border: solid black 1px;
+            /* border: solid black 1px; */
             display: flex;
             align-items: center;
             justify-content: space-between;
-
+            box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.068);
             padding: 0px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+
         }
 
         .logo_div {
@@ -75,9 +80,11 @@
             padding: 10px;
             opacity: 0;
             visibility: hidden;
-            transition: all .2s ease-in-out;
+            transform: translateY(30px);
+            transition: all .2s ease-out;
             cursor: pointer;
         }
+       
         .drop_down_text_div{
             height: 43%;
             /* border: solid black 1px; */
@@ -95,6 +102,7 @@
             opacity: 1;
             visibility: visible;
             cursor: pointer;
+            transform: translateY(10px);
 
 
         }
@@ -177,6 +185,109 @@
             /* border: solid black 1px; */
             display: none;
         }
+        .header{
+            height: 90vh;
+            width: 100%;
+            /* border: solid black 1px; */
+            margin-top: 10px;
+            background-image: url(./images/bg.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-bottom-left-radius: 50px;
+             border-bottom-right-radius: 50px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+        }
+        .h_div1{
+            height: max-content;
+            width: 85%;
+            background-color: white;
+            border-radius: 10px;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .img_div{
+           /* border: solid black 1px; */
+           height: 350px;
+           width: 46%;
+           border-radius: 10px;
+           overflow: hidden;
+          
+            
+        }
+        .h_img{
+            height: 100%;
+            width: 100%;
+        }
+        .div_sibling{
+            height: 100%;
+            width: 50%;
+            border: solid black 1px;
+            border-radius: 10px;
+        }
+        .btn_div{
+            margin-left: 30px;
+            margin-top: 50px;
+            width: 95px;
+            height: 30px;
+            border: none;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            font-size: 16px;
+            color: rgb(80, 78, 226);
+            font-weight: bold;
+        }
+        .h_h1{
+            font-size: 20px;
+            margin-left: 30px;
+            width: 92%;
+            font-size: 25px;
+            margin-top: 15px;
+        }
+        .h_pt1{
+            font-size: 15px;
+            margin-left: 30px;
+            margin-top: 15px;
+            font-size: 17px;
+            color: rgba(0, 0, 0, 0.521);
+        }
+         .innr_prnt{
+            height: 50px;
+            width: max-content;
+            /* border: solid black 1px; */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            
+        }
+        .div_img{
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            /* border: solid black 1px; */
+            margin-left: 30px;
+            /* margin-top: 30px; */
+        }
+        #img_2{
+            height: 100%;
+            width: 100%;
+        }
+        .h_ptag{
+            font-size: 14px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.589);
+        }
+        .h_ptag2{
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.767);
+        }
+       
         /* ////////////////////// */
         @media screen and (max-width:1100px) {
             .n_prnt_div{
@@ -187,9 +298,19 @@
             }
 
         }
-        @media screen and (max-width:758px) {
+        @media screen and (max-width:770px) {
             ul{
                 display: none;
+            }
+           
+            
+        }
+        @media screen and (max-width:430px) {
+            .navdiv{
+                height: 50px;
+            }
+            .logo_div{
+                width: 100px;
             }
             
         }
@@ -198,7 +319,7 @@
 
 <body>
 
-    <main>
+    <main style="padding-top: 70px;">
         <nav class="navdiv">
             <div class="logo_div">
                 <img id="img" src="./images/newlogo.svg" alt="">
@@ -296,6 +417,28 @@
                 </button>
             </div>
         </nav>
+        <!-- ////////////nav/////////// -->
+         <header class="header">
+            <div class="h_div1">
+                <div class="img_div">
+                    <img class="h_img" src="./images/blog-01.png" alt="">
+                </div>
+                <div class="div_sibling">
+                        <button class="btn_div">Lifestyle</button>
+                        <h1 class="h_h1">Begin here to obtain a brief summary encompassing all the essential</h1>
+                        <p class="h_pt1">This comprehensive post serves as your cheat-sheet to swiftly familiarize yourself with Ghost. Packed with crucial...</p>
+                        <div class="innr_prnt">
+
+                            <div class="div_img">
+                                <img id="img_2" src="./images/user-01.png" alt="">
+                            </div>
+                            <p class="h_ptag">Adrio Devid .</p>
+                            <p class="h_ptag2">Sep 10, 2025</p>
+                        </div>
+                </div>
+            </div>
+
+         </header>
     </main>
 
 </body>
