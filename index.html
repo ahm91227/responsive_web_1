@@ -28,6 +28,7 @@
             position: fixed;
             top: 0;
             left: 0;
+            background-color: white;
 
         }
 
@@ -188,6 +189,7 @@
         .header{
             height: 90vh;
             width: 100%;
+            padding-top: 100px;
             /* border: solid black 1px; */
             margin-top: 10px;
             background-image: url(./images/bg.svg);
@@ -195,24 +197,28 @@
             background-repeat: no-repeat;
             background-size: cover;
             border-bottom-left-radius: 50px;
-             border-bottom-right-radius: 50px;
-             display: flex;
-             align-items: center;
-             justify-content: center;
+            border-bottom-right-radius: 50px;
+            
         }
         .h_div1{
             height: max-content;
             width: 85%;
             background-color: white;
+            /* border: solid black 1px; */
+            box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.233);
             border-radius: 10px;
             padding: 6px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 30px;
             gap: 25px;
+            flex-wrap: wrap;
         }
         .img_div{
            /* border: solid black 1px; */
-           height: 350px;
+           height: max-content;
            width: 46%;
            border-radius: 10px;
            overflow: hidden;
@@ -220,17 +226,19 @@
             
         }
         .h_img{
-            height: 100%;
             width: 100%;
+            object-fit: cover;
         }
         .div_sibling{
-            height: 100%;
+            height: max-content;
             width: 50%;
-            border: solid black 1px;
+            /* border: solid black 1px; */
             border-radius: 10px;
+            padding-left:10px;
+            padding-right:10px;
         }
         .btn_div{
-            margin-left: 30px;
+            /* margin-left: 30px; */
             margin-top: 50px;
             width: 95px;
             height: 30px;
@@ -243,14 +251,14 @@
         }
         .h_h1{
             font-size: 20px;
-            margin-left: 30px;
+            /* margin-left: 30px; */
             width: 92%;
             font-size: 25px;
             margin-top: 15px;
         }
         .h_pt1{
             font-size: 15px;
-            margin-left: 30px;
+            /* margin-left: 30px; */
             margin-top: 15px;
             font-size: 17px;
             color: rgba(0, 0, 0, 0.521);
@@ -271,7 +279,7 @@
             width: 30px;
             border-radius: 50%;
             /* border: solid black 1px; */
-            margin-left: 30px;
+            /* margin-left: 30px; */
             /* margin-top: 30px; */
         }
         #img_2{
@@ -287,8 +295,73 @@
             font-weight: bold;
             color: rgba(0, 0, 0, 0.767);
         }
-       
+        .h_div2{
+            height: max-content;
+            width: 85%;
+            /* border: solid black 1px; */
+            margin: auto;
+            padding: 8px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .innr_divs{
+            height: 160px;
+            width: 48%;
+            /* border: solid black 1px; */
+            border-radius: 12px;
+            padding: 5px;
+             display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .h_img_div{
+            height: 100%;
+            width: 38%;
+            /* border: solid black 1px; */
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        #hero{
+            height: 100%;
+            width: 100%;
+        }
+        .h_innr_div{
+            height: 100%;
+            width: 58%;
+            /* border: solid black 1px; */
+            padding: 3px;
+        }
+        .h_btn{
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: 13px;
+            font-weight: bold;
+            color: rgb(80, 78, 226);
+            background-color: whitesmoke;
+        }
+        .h_ptag3{
+            font-size: 16px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        .h_pt2{
+            margin-left: 10px;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .span_{
+            margin-left: 3px;
+        }
         /* ////////////////////// */
+
+       
+        
         @media screen and (max-width:1100px) {
             .n_prnt_div{
                 display: none;
@@ -296,15 +369,40 @@
             .menubar{
                 display: block;
             }
+            .h_h1{
+                font-size: 20px;
+            }
+            .h_pt1{
+                font-size: 15px;
+            }
 
+        }
+         @media screen and (max-width:1006px) {
+            .img_div{
+               width: 100%;
+               height: 400px;
+            }
+            .div_sibling{
+                width:100%;
+            }
         }
         @media screen and (max-width:770px) {
             ul{
                 display: none;
             }
+             .h_h1{
+                font-size: 16px;
+            }
+            .h_pt1{
+                font-size: 13px;
+            }
+            .img_div{
+                height: max-content;
+            }
            
             
         }
+       
         @media screen and (max-width:430px) {
             .navdiv{
                 height: 50px;
@@ -314,6 +412,54 @@
             }
             
         }
+        @media screen and (max-width:681px) {
+            .h_h1{
+                font-size: 14px;
+            }
+            .h_pt1{
+                font-size: 10px;
+            }
+            
+        }
+         @media screen and (max-width:428px) {
+            .h_ptag{
+                font-size: 13px;
+            }
+            .h_ptag2{
+                font-size: 12px;
+            }
+            .div_img{
+                height: 25px;
+                width: 25px;
+            }
+             .h_ptag{
+                font-size: 10px;
+            }
+            .h_ptag2{
+                font-size: 10px;
+            }
+            .div_img{
+                height: 25px;
+                width: 25px;
+            }
+            .btn_div{
+                margin-top: 10px;
+            }
+            .div_sibling{
+                width: 95%;
+            }
+            .btn_div{
+                width: 80px;
+                height: 26px;
+                font-size: 12px;
+            }
+            
+            
+            
+        }
+       
+        
+       
     </style>
 </head>
 
@@ -435,6 +581,30 @@
                             <p class="h_ptag">Adrio Devid .</p>
                             <p class="h_ptag2">Sep 10, 2025</p>
                         </div>
+                </div>
+            </div>
+            <div class="h_div2">
+                <div class="innr_divs">
+                    <div class="h_img_div">
+                        <img id="hero" src="./images/hero-02.png" alt="">
+                    </div>
+                    <div class="h_innr_div">
+                        <button class="h_btn">Technolgy</button>
+                        <h1 class="h_ptag3">14 Innovative Architectural Designs to Create a Vast Interior Space</h1>
+                        <p class="h_pt2">By Adrio Devid . <span class="span_">Sep 10, 2025</span></p>
+                        <p class="h_pt3"></p>
+                    </div>
+                </div>
+                <div class="innr_divs">
+                     <div class="h_img_div">
+                        <img id="hero" src="./images/hero-03.png" alt="">
+                    </div>
+                    <div class="h_innr_div">
+                        <button class="h_btn" style="color: green;">Travel</button>
+                        <h1 class="h_ptag3">Traveller Visiting Ice Cave With Amazing Eye-catching view with nature</h1>
+                        <p class="h_pt2">By Adrio Devid . <span class="span_">Sep 10, 2025</span></p>
+                        <p class="h_pt3"></p>
+                    </div>
                 </div>
             </div>
 
